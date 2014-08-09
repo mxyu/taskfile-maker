@@ -42,7 +42,7 @@ body {
     position: relative; }
 
 .SetupView {
-  width: 300px;
+  width: 450px;
   margin: 0 auto; }
   .SetupView .setup-item {
     margin-bottom: 12px;
@@ -60,8 +60,10 @@ body {
     width: 165px; }
   .FlowView.row .btn.add-task-button {
     vertical-align: top;
-    background: none !important;
-    text-transform: uppercase; }
+    background: #f26a2f !important;
+    color: white;
+    text-transform: uppercase;
+    display: block; }
 
 ul.FlowList {
   padding: 0; }
