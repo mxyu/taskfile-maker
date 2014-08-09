@@ -1,0 +1,106 @@
+body {
+  background: #52bad5; }
+
+.Taskmaker {
+  background: white;
+  font-family: Lato;
+  color: #555555;
+  font-size: 16px;
+  width: 1000px;
+  height: 100%;
+  margin: 0 auto; }
+  .Taskmaker .banner {
+    height: 100px;
+    text-align: center;
+    font-size: 48px;
+    padding: 24px; }
+  .Taskmaker input[type='text'] {
+    border: 2px solid #cccccc;
+    border-radius: 2px;
+    transition: border .2s;
+    padding: 6px 12px; }
+    .Taskmaker input[type='text']:active, .Taskmaker input[type='text']:focus {
+      outline: none;
+      border: 2px solid #52bad5; }
+  .Taskmaker a {
+    color: #52bad5;
+    cursor: pointer; }
+    .Taskmaker a:hover {
+      color: #2c9ab7; }
+  .Taskmaker .btn {
+    box-shadow: none;
+    font-size: 16px;
+    height: 38px;
+    background: #e0e0e0;
+    color: #595959;
+    transition: background .2s; }
+    .Taskmaker .btn:hover {
+      background: #d3d3d3; }
+  .Taskmaker .current-view {
+    padding: 25px 40px;
+    height: calc(100% - 144px);
+    position: relative; }
+
+.SetupView {
+  width: 300px;
+  margin: 0 auto; }
+  .SetupView .setup-item {
+    margin-bottom: 12px;
+    display: inline-block;
+    padding: 0 15px; }
+    .SetupView .setup-item span {
+      display: block; }
+    .SetupView .setup-item input {
+      max-width: 120px; }
+
+.FlowView.row {
+  position: relative;
+  height: 100%; }
+  .FlowView.row input.task-name-input {
+    width: 165px; }
+  .FlowView.row .btn.add-task-button {
+    vertical-align: top;
+    background: none !important;
+    text-transform: uppercase; }
+
+ul.FlowList {
+  padding: 0; }
+  ul.FlowList li {
+    list-style-type: none; }
+    ul.FlowList li span {
+      padding-right: 10px; }
+
+ul.Navigation {
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: relative; }
+  ul.Navigation:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #eeeeee;
+    z-index: 0; }
+  ul.Navigation li {
+    display: inline-block;
+    padding: 10px 0;
+    margin: 0 18px;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    border-bottom: 2px solid transparent;
+    position: relative;
+    z-index: 5; }
+    ul.Navigation li a {
+      text-decoration: none; }
+    ul.Navigation li.selected {
+      border-bottom: 2px solid #888888; }
+    ul.Navigation li:not(.selected) a {
+      color: #555555; }
+    ul.Navigation li:not(.selected):hover {
+      border-bottom: 2px solid #aaaaaa; }

@@ -1,0 +1,172 @@
+$navigationBorderColor: #eee;
+$navigationHoverBorderColor: #aaa;
+$navigationSelectedBorderColor: #888;
+$inputBorderColor: #ccc;
+
+$smallSize: 13px;
+$normalSize: 16px;
+$largeSize: 22px;
+$xlargeSize: 36px;
+
+$textColor: #555;
+$anchorColor: #52bad5;
+$anchorHoverColor: #2c9ab7;
+
+
+body {
+	background: $anchorColor;
+}
+
+.Taskmaker {
+	background: white;
+	font-family: Lato;
+	color: $textColor;
+	font-size: $normalSize;
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+
+	.banner {
+		height: 100px;
+		text-align: center;
+		font-size: 48px;
+		padding: 24px;
+	}
+
+	input[type='text'] {
+		border: 2px solid $inputBorderColor;
+		border-radius: 2px;
+		transition: border .2s;
+		padding: 6px 12px;
+
+		&:active, &:focus {
+			outline: none;
+			border: 2px solid $anchorColor;
+		}
+	}
+
+	a {
+		color: $anchorColor;
+		cursor: pointer;
+
+		&:hover {
+			color: $anchorHoverColor;
+		}
+	}
+
+	.btn {
+		box-shadow: none;
+		font-size: $normalSize;
+		height: 38px;
+		background: #e0e0e0;
+		color: #595959;
+		transition: background .2s;
+
+		&:hover {
+			background: #d3d3d3;
+		}
+	}
+
+	.current-view {
+		padding: 25px 40px;
+		height: calc(100% - 144px);
+		position: relative;
+	}
+}
+
+.SetupView {
+	width: 300px;
+	margin: 0 auto;
+
+	.setup-item {
+		margin-bottom: 12px;
+		display: inline-block;
+		padding: 0 15px;
+
+		span {
+			display: block;
+		}
+
+		input {
+			max-width: 120px;
+		}
+	}
+}
+
+.FlowView.row {
+	position: relative;
+	height: 100%;
+
+	input.task-name-input {
+		width: 165px;
+	}
+
+	.btn.add-task-button {
+		vertical-align: top;
+		background: none !important;
+		text-transform: uppercase;
+	}
+}
+
+ul.FlowList {
+	padding: 0;
+
+	li {
+		list-style-type: none;
+
+		span {
+			padding-right: 10px;
+		}
+	}
+}
+
+ul.Navigation {
+	display: block;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	position: relative;
+
+	&:after {
+		content: '';
+		width: 100%;
+		height: 2px;
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background: $navigationBorderColor;
+		z-index: 0;
+	}
+
+	li {
+		display: inline-block;
+		padding: 10px 0;
+		margin: 0 18px;
+		text-transform: uppercase;
+		font-size: $normalSize;
+		letter-spacing: 0.1em;
+		border-bottom: 2px solid transparent;
+		position: relative;
+		z-index: 5;
+
+		a {
+			text-decoration: none;
+		}
+
+		&.selected {
+			border-bottom: 2px solid $navigationSelectedBorderColor;
+		}
+
+		&:not(.selected) {
+
+			a {
+				color: $textColor;
+			}
+
+			&:hover {
+				border-bottom: 2px solid $navigationHoverBorderColor;
+			}
+		}
+	}
+}
